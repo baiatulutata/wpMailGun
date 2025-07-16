@@ -11,7 +11,7 @@
  * Requires PHP:      7.2
  * Requires at least: 5.0
  * Tested up to:      6.8
- * Text Domain:       MailGun
+ * Text Domain:       mailgun-email-override
  */
 
 if (!defined('ABSPATH')) exit;
