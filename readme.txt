@@ -23,7 +23,7 @@ This plugin overrides the default WordPress email sending function with MailGuns
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/email-override-for-mailgun/` directory.
+1. Upload the plugin files to the `/wp-content/plugins/mailgun-email-override/` directory.
 2. Activate the plugin through the "Plugins" menu in WordPress.
 3. Go to **Settings > Mailgun Email**.
 4. Enter your Mailgun API key and domain, set the sender info, and enable the override.

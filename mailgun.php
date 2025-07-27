@@ -11,7 +11,7 @@
  * Requires PHP:      7.2
  * Requires at least: 5.0
  * Tested up to:      6.8
- * Text Domain:       email-override-for-mailgun
+ * Text Domain:       mailgun-email-override
  */
 
 if (!defined('ABSPATH')) exit;
@@ -28,7 +28,7 @@ class Mailgun_Email_Override {
     }
 
     public function add_settings_page() {
-        add_options_page('Email Override for Mailgun', 'Mailgun Email', 'manage_options', 'email-override-for-mailgun', [$this, 'render_settings_page']);
+        add_options_page('Email Override for Mailgun', 'Mailgun Email', 'manage_options', 'mailgun-email-override', [$this, 'render_settings_page']);
     }
 
     public function register_settings() {
@@ -39,7 +39,7 @@ class Mailgun_Email_Override {
     }
 
     public function enqueue_admin_scripts($hook) {
-        if ($hook === 'settings_page_email-override-for-mailgun') {
+        if ($hook === 'settings_page_mailgun-email-override') {
             wp_enqueue_script('mailgun-admin', plugin_dir_url(__FILE__) . 'mailgun-admin.js', ['jquery'], '1.0.0', true);
             wp_localize_script('mailgun-admin', 'mailgun_ajax', [
                 'ajax_url' => admin_url('admin-ajax.php'),
