@@ -1,4 +1,4 @@
-=== Mailgun Email Override ===
+=== Email Override for Mailgun ===
 Contributors: ionutbaldazar
 Tags: mailgun, email, smtp, wp_mail, api
 Requires at least: 5.0
@@ -15,7 +15,7 @@ This plugin overrides the default WordPress email sending function with MailGuns
 
 **Key Features:**
 
-- Toggle Mailgun email override on/off
+- Toggle Email Override for Mailgun on/off
 - Enter your Mailgun API key and domain
 - Customize the "From" email and name
 - Send a test email directly from the settings page
@@ -23,7 +23,7 @@ This plugin overrides the default WordPress email sending function with MailGuns
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/mailgun-email-override/` directory.
+1. Upload the plugin files to the `/wp-content/plugins/email-override-for-mailgun/` directory.
 2. Activate the plugin through the "Plugins" menu in WordPress.
 3. Go to **Settings > Mailgun Email**.
 4. Enter your Mailgun API key and domain, set the sender info, and enable the override.

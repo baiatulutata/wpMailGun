@@ -1,4 +1,4 @@
-# Mailgun Email Override
+# Email Override for Mailgun
 
 A WordPress plugin that overrides `wp_mail()` to send all emails through the Mailgun API.
 

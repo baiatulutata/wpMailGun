@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name:       Mailgun Email Override
+ * Plugin Name:       Email Override for Mailgun
  * Plugin URI:        https://github.com/baiatulutata/ptei
  * Description:       Replaces WordPress wp_mail with Mailgun API. Includes settings page with toggle, API key input, domain, and test button.
  * Version:           1.0.0
@@ -11,7 +11,7 @@
  * Requires PHP:      7.2
  * Requires at least: 5.0
  * Tested up to:      6.8
- * Text Domain:       mailgun-email-override
+ * Text Domain:       email-override-for-mailgun
  */
 
 if (!defined('ABSPATH')) exit;
@@ -28,7 +28,7 @@ class Mailgun_Email_Override {
     }
 
     public function add_settings_page() {
-        add_options_page('Mailgun Email Override', 'Mailgun Email', 'manage_options', 'mailgun-email-override', [$this, 'render_settings_page']);
+        add_options_page('Email Override for Mailgun', 'Mailgun Email', 'manage_options', 'email-override-for-mailgun', [$this, 'render_settings_page']);
     }
 
     public function register_settings() {
@@ -39,7 +39,7 @@ class Mailgun_Email_Override {
     }
 
     public function enqueue_admin_scripts($hook) {
-        if ($hook === 'settings_page_mailgun-email-override') {
+        if ($hook === 'settings_page_email-override-for-mailgun') {
             wp_enqueue_script('mailgun-admin', plugin_dir_url(__FILE__) . 'mailgun-admin.js', ['jquery'], '1.0.0', true);
             wp_localize_script('mailgun-admin', 'mailgun_ajax', [
                 'ajax_url' => admin_url('admin-ajax.php'),
@@ -52,7 +52,7 @@ class Mailgun_Email_Override {
         $options = get_option($this->option_name);
         ?>
         <div class="wrap">
-            <h1>Mailgun Email Override</h1>
+            <h1>Email Override for Mailgun</h1>
             <form method="post" action="options.php">
                 <?php settings_fields('mailgun_email_override_group'); ?>
                 <table class="form-table">
