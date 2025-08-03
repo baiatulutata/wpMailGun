@@ -1,5 +1,5 @@
 === Email Override for Mailgun ===
-Contributors: ionutbaldazar
+Contributors: baiatulutata
 Tags: mailgun, email, smtp, wp_mail, api
 Requires at least: 5.0
 Tested up to: 6.8
@@ -53,3 +53,21 @@ Not in this version. The plugin currently sends plain text emails only.
 
 = 1.0 =
 Initial stable release.
+
+== External Services ==
+
+This plugin integrates with the [Mailgun](https://www.mailgun.com/) email delivery service to send outgoing emails via its API instead of the default `wp_mail()` function.
+
+When enabled, the plugin communicates with the following Mailgun API endpoint: https://api.mailgun.net/v3/YOUR_DOMAIN/messages
+
+**Data sent to Mailgun includes:**
+- Sender name and email
+- Recipient email(s)
+- Email subject
+- Message body (text or HTML)
+- Optional headers (Cc, Bcc)
+
+The plugin requires a valid Mailgun API key and domain to function. These credentials are stored in your WordPress database and used only to authenticate API requests to Mailgun.
+
+**Privacy Notice:**
+By using this plugin, you agree to Mailgun’s [Terms of Service](https://www.mailgun.com/terms/) and [Privacy Policy](https://www.mailgun.com/privacy-policy/). Ensure your use of Mailgun complies with local privacy laws and your own data protection policies.
